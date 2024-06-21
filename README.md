@@ -1,0 +1,2 @@
+# PP_SpyCamera
+Hackaton IA - Juin 2024 - sur une période de 4 jours, réaliser une application Web avancée de Reconnaissance d’Objets en Temps Réel sur cinq jours. L’objectif principal du projet est de créer une application web qui utilise la caméra de l'ordinateur pour détecter et reconnaître des objets en temps réel, avec des fonctionnalités avancées.

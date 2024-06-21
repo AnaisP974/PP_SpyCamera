@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./asset/css/style.css">
+</head>
+<body>
+    <!-------------------------      NAVBAR     ---------------------------->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./asset/image/logo_spycamera_bgdark.png" alt="logo" class="logo__img">
+                <h1 class="logo__title">SPY CAMERA</h1>
+            </div>
+            <div class="switch">
+                <label class="switch__label">
+                    <input type="checkbox" name="jourNuit" id="jourNuit">
+                    <span class="slider round"></span>
+                </label>
+                <p class="header__switch--p">Jour/Nuit</p>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+    <!-------------------------      CAMERA     ---------------------------->
+        <section class="video">
+            <div class="container" id="videoContainer">
+                <p>Welcome Roger,</p>
+                <video id="emitter-video" class="video__screan"></video>
+                <canvas class="video__screan d-none" id="canvas"></canvas> 
+                <button id="camera" class="startCamera btnCamera">Start camera</button>
+                <section id="dashboard" class="d-none">
+                    <figure id="screenshot">
+                        <img src="./asset/image/icone_screenshot.png" alt="ScreenShot" title="ScreenShot">
+                    </figure>
+
+                    <figure id="motiondetection">
+                        <img src="./asset/image/icone_start_motiondetection.png" alt="Motion Dectection" title="Motion Dectection">
+                    </figure>
+
+                    <figure id="start_scan">
+                        <img src="./asset/image/icone_start_scan.png" alt="Object detection" title="Object detection">
+                    </figure>
+                </section>
+            </div>
+            <div id="result"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Hackathon IA - Juin 2024 - Centre de formation PREPAVENIR - CDA</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+    <script src="./asset/js/script.js"></script>
+</body>
+</html>

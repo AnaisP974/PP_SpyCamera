@@ -1,0 +1,67 @@
+main{
+    .video{
+        margin: 20px;
+        min-width: 300px;
+        .container{
+            font-size: 1.3rem;
+            width: 60%;
+            min-width: 300px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            
+            #dashboard{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                background-color: rgba(255, 255, 255, 0.5);
+                figure{
+                    width: 50px;
+                    padding: 5px;
+                    border: 1px solid grey ;
+                    img{
+                        width: 100%;
+                    }
+                }
+                figure:hover{
+                    cursor: pointer;
+                }
+            }
+            video{
+                background-color: rgba(217, 217, 217, 0.5);
+            }
+            .btnCamera{
+                background-color: #5B0404;
+                height: 60px;
+                font-size: 1.3rem;
+                font-weight:  bold;
+                color: aliceblue;
+                border: none;
+            }
+            .startCamera{
+                background-color: #045B04;
+            }
+        }
+        #result{
+            display: flex;
+            gap: 5px;
+            margin-top: 50px;
+            canvas{
+                width: 24%;
+            }
+        }
+    }
+
+}
+
+@media screen and (width >= 768px) {
+    header nav h1{
+      font-size: 2em;
+      margin: 0;
+    }
+    main{
+        .video{
+            margin: 50px;
+        }
+    }
+  }
