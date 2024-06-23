@@ -29,6 +29,16 @@
         <section class="video">
             <div class="container" id="videoContainer">
                 <p>Welcome Roger,</p>
+                <div id="predictions" class="d-none">
+                    <div class="objectDetected">
+                        <h3>Class :</h3>
+                        <p id="predictionClass">Dog</p>
+                    </div>
+                    <div class="objectScore">
+                        <h3>Pourcentage:</h3>
+                        <p id="predictionScore">70%</p>
+                    </div>
+                </div>
                 <video id="emitter-video" class="video__screan"></video>
                 <canvas class="video__screan d-none" id="canvas"></canvas> 
                 <button id="camera" class="startCamera btnCamera">Start camera</button>
@@ -53,9 +63,11 @@
     <footer>
         <p>Hackathon IA - Juin 2024 - Centre de formation PREPAVENIR - CDA</p>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <!-- Import TensorFlow.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
+    <!-- Load the coco-ssd model to use to recognize things in images -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
-    <script src="./asset/js/script.js"></script>
+    
+    <script type="module" src="./asset/js/script.js"></script>
 </body>
 </html>

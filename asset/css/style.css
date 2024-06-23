@@ -1,29 +1,39 @@
-
 @import url(./partials/header.css);
 @import url(./partials/main.css);
-body{
+
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
-  background-color: #92acb2;
-  
-  .d-none{
+  background: rgb(102, 201, 203);
+  background: radial-gradient(circle, rgba(102, 201, 203, 1) 0%, rgba(250, 215, 141, 1) 100%);
+
+  .d-none {
     display: none !important;
   }
 
-  footer{
+  
+
+  footer {
     width: 100%;
-    position: fixed;
-    bottom: 0;
-    p{
+
+    p {
       text-align: center;
     }
   }
 }
-  /* DESCRIPTION DARK_MODE */
-  .darkMode{
-    background-color: #071C42;
-    color: #f3f0f0;
+
+/* DESCRIPTION DARK_MODE */
+.darkMode {
+  background: rgb(7, 28, 66);
+  background: radial-gradient(circle, rgba(7, 28, 66, 1) 0%, rgba(149, 0, 147, 1) 100%);
+  
+  color: #f3f0f0;
+
+  #predictions{
+    background-color:rgb(14, 52, 71) !important;  
+    border: 1px solid #f3f0f0;
+  }
 }

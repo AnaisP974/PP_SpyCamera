@@ -1,15 +1,42 @@
 main{
+    min-height: 75vh ;
     .video{
-        margin: 20px;
+        margin: 20px auto;
         min-width: 300px;
         .container{
             font-size: 1.3rem;
-            width: 60%;
-            min-width: 300px;
+            width: 300px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
             
+            #predictions{
+                padding: 20px;
+                margin: 0;
+                background-color:rgb(241, 243, 244);
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                h3{
+                    margin: 0;
+                    width: 40%;
+                    font-size: 1em;
+                }
+                p{
+                    margin: 0;
+                    width: 60%;
+                    font-size: 1em;
+                    font-weight: 400;
+                    text-align: center;
+                }
+                .objectDetected, 
+                .objectScore{
+                    display: flex;
+                }
+            }
+
+            canvas{
+                height: 220px;
+            }
+
             #dashboard{
                 display: flex;
                 justify-content: space-between;
@@ -27,11 +54,12 @@ main{
                     cursor: pointer;
                 }
             }
-            video{
-                background-color: rgba(217, 217, 217, 0.5);
+            video,
+            canvas{
+                background-color: rgba(217, 217, 217);
             }
             .btnCamera{
-                background-color: #5B0404;
+                background-color: #9e0622;
                 height: 60px;
                 font-size: 1.3rem;
                 font-weight:  bold;
@@ -44,10 +72,12 @@ main{
         }
         #result{
             display: flex;
-            gap: 5px;
-            margin-top: 50px;
+            flex-wrap: wrap;
+            margin: 50px;
+            gap: 2%;
             canvas{
-                width: 24%;
+                width: 18%;
+                margin-bottom: 15px;
             }
         }
     }
@@ -55,13 +85,26 @@ main{
 }
 
 @media screen and (width >= 768px) {
-    header nav h1{
-      font-size: 2em;
-      margin: 0;
+    header{
+        nav h1{
+            display: inline-block !important;
+            font-size: 2em;
+            margin: 0;
+        }
     }
     main{
         .video{
             margin: 50px;
+            .container{
+                width: 450px;
+                canvas{
+                    height: 335px !important;
+                }
+            }
+        }
+        #result{
+            margin: 50px auto !important;
+            width: 750px;
         }
     }
   }

@@ -2,7 +2,7 @@ header{
     background-color: #040F24;
     padding: 1em;
     color: #fff;
-    width: 100%;
+    max-width: 100%;
     nav{
         display: flex;
         justify-content: space-between;
